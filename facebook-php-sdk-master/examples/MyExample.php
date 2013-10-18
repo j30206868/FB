@@ -53,6 +53,12 @@ if ($user) {
 // This call will always work since we are fetching public data.
 $naitik = $facebook->api('/naitik');
 
+
+//使用AccessToken 取得Secret社團資訊(非其成員)
+//$facebook->setAccessToken("CAACEdEose0cBABDba2DlGf90BbwKHEt3uS2cNvZA2ILQJFD3QjDFvQG6TyXgkZATrtYJP4E1GSziCi9VdF5AFdhdBbZCzlV7LQs8vrD1Fy45ZB8JZCoVp8bNLRHNK7hNn5HzvwuSuXGZBn5BtKZC2cXltzNgZB6eZCk5MylEjYyemvMZC7wfLgUX2DbwRLFQXZAjsmPvaZAFqvMEZCgZDZD");
+$ret = $facebook->api('/575064682549546/members/100002487781093', 'POST');
+var_dump($ret);
+
 ?>
 <!doctype html>
 <html xmlns:fb="http://www.facebook.com/2008/fbml">
